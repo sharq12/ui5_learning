@@ -1,0 +1,59 @@
+<mvc:View controllerName="project4odatacrud.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <Table  headerText="Products" id="_IDProductTable" items="{/Products}">
+         <columns>
+           <Column id="_IDGenColumn" >
+              <Text id="_IDGenText1" text="ID"/>
+           </Column>
+            <Column id="_IDGenColumn2" >
+              <Text id="_IDGenText2" text="Name"/>
+           </Column>
+            <Column id="_IDGenColum3" >
+              <Text id="_IDGenText3" text="Description"/>
+           </Column>
+            <Column id="_IDGenColumn5" >
+              <Text id="_IDGenText5" text="Price"/>
+           </Column>
+            <Column id="_IDGenColumn4" >
+              <Text id="_IDGenText4" text="Rating"/>
+           </Column>
+            <Column id="_IDGenColumn8" >
+              
+           </Column>
+            
+         </columns>
+         <items>
+            <ColumnListItem id="_IDGenColumnListItem" >
+               <cells>
+                 <Text id="_IDGenText6" text="{ID}" />
+               </cells>
+               <cells>
+                 <Text id="_IDGenText7" text="{Name}" />
+               </cells>
+               <cells>
+                 <Text id="_IDGenText8" text="{Description}" />
+               </cells>
+                <cells>
+                 <Text id="_IDGenText10" text="{Price}" />
+               </cells>
+               <cells>
+                 <Input id="IDRatingInput" value="{Rating}" editable="false"/>
+               </cells>
+                <cells>
+                 <HBox id="_IDGenHBox1" >
+                  <Button id="_IDGenButton" text="Edit" type="Accept" press="onEditPress"></Button>
+                  <Button id="_IDGenButton1" text="Delete" class="sapUiTinyMarginBegin sapUiTinyMarginEnd" type="Reject" press="onDeletePress"></Button>
+                  <Button id="_IDGenButton2" text="Duplicate" press="onDuplicatePress" ></Button>
+                  
+                 </HBox>
+               </cells>
+
+            </ColumnListItem>
+         </items>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
