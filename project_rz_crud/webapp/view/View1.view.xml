@@ -1,0 +1,130 @@
+<mvc:View controllerName="com.demo.b74ui5app.controller.View1"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:core="sap.ui.core">
+  <Page title="I am View1">
+    <content>
+      <Panel headerText="Search Employees" expandable="true" expanded="false" class="sapUiSmallMargin" width="auto">
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" emptySpanXL="0" emptySpanL="0" emptySpanM="0" columnsXL="3" columnsL="3" columnsM="3">
+          <f:content>
+            <core:Title text="Filters"></core:Title>
+            <Label text="Employee Id"></Label>
+            <Input id="idEmpId"></Input>
+            <Label text="Name"></Label>
+            <Input id="idName"></Input>
+            <Label text="Skill"></Label>
+            <Input id="idSkill"></Input>
+            <Label text="Designation"></Label>
+            <Input id="idDesig"></Input>
+            <Label text="Salary"></Label>
+            <Select id="idOpr" items="{lookupModel>/aOprs}" change="onSelOperator">
+              <items>
+                <core:Item text="{lookupModel>text}" key="{lookupModel>key}"></core:Item>
+              </items>
+            </Select>
+            <Input id="idSalary"></Input>
+            <Input id="idSalary2" visible="false"></Input>
+            <Label text="Date of joining"></Label>
+            <DatePicker id="idDoj" displayFormat="dd-MM-yyyy" valueFormat="yyyy-MM-dd"></DatePicker>
+
+            <core:Title text="Sort"></core:Title>
+            <Label text="Sort Field"></Label>
+            <ComboBox id="idSortField" items="{lookupModel>/aEmpTabCols}">
+              <items>
+                <core:Item text="{lookupModel>text}" key="{lookupModel>key}"></core:Item>
+              </items>
+            </ComboBox>
+            <Label text="Sort Order"></Label>
+            <RadioButtonGroup id="idSortOrder" selectedIndex="-1" columns="2">
+              <buttons>
+                <RadioButton text="Ascending"></RadioButton>
+                <RadioButton text="Descending"></RadioButton>
+              </buttons>
+            </RadioButtonGroup>
+
+            <core:Title text="Grouping"></core:Title>
+            <Label text="Group Field"></Label>
+            <ComboBox id="idGroupField">
+              <items>
+                <core:Item text="Designation" key="Desig"></core:Item>
+                <core:Item text="Skill" key="Skill"></core:Item>
+              </items>
+            </ComboBox>
+            <Label text="Group Order"></Label>
+            <RadioButtonGroup id="idGroupOrder" selectedIndex="-1" columns="2">
+              <buttons>
+                <RadioButton text="Ascending"></RadioButton>
+                <RadioButton text="Descending"></RadioButton>
+              </buttons>
+            </RadioButtonGroup>
+
+          </f:content>
+        </f:SimpleForm>
+        <FlexBox justifyContent="End">
+          <Button text="Go" type="Accept" icon="sap-icon://accept" press="onPressGo"></Button>
+          <Button text="Reset" type="Reject" icon="sap-icon://reset" press="onPressReset" class="sapUiTinyMarginBegin"></Button>
+        </FlexBox>
+
+      </Panel>
+
+
+      <Table id="idTable" items="{/EmployeeSet}" class="sapUiSmallMargin" width="auto" mode="SingleSelectLeft">
+        <headerToolbar>
+          <Toolbar >
+            <Title text="Employees"></Title>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="Create New Employee" icon="sap-icon://add" type="Emphasized" press="onPressCreate"></Button>
+            <Button text="Edit Employee" icon="sap-icon://edit" type="Emphasized" press="onPressEdit"></Button>
+            <Button text="Delete Employee" icon="sap-icon://delete" type="Reject" press="onPressDelete"></Button>
+            <Button icon="sap-icon://excel-attachment" type="Emphasized" press="onPressExportToXL"></Button>
+          </Toolbar>
+        </headerToolbar>
+        <columns>
+
+          <Column >
+            <Text text="Employee Id"></Text>
+          </Column>
+          <Column >
+            <Text text="Employee Name"></Text>
+          </Column>
+          <Column >
+            <Text text="Designation"></Text>
+          </Column>
+          <Column >
+            <Text text="Skill"></Text>
+          </Column>
+          <Column >
+            <Text text="Salary"></Text>
+          </Column>
+          <Column >
+            <Text text="Date Of Joining"></Text>
+          </Column>
+
+        </columns>
+        <items>
+          <ColumnListItem type="Active" press="onPressRow">
+
+            <Text text="{Empid}"></Text>
+            <Text text="{Name}"></Text>
+            <Text text="{Desig}"></Text>
+            <ObjectStatus text="{Skill}" state="{path:'Skill',formatter:'.f.colorSkill'}"></ObjectStatus>
+            <Text text="{Salary}"></Text>
+            <Text text="{path:'Doj',formatter:'.f.formatDate'}"></Text>
+          </ColumnListItem>
+        </items>
+      </Table>
+
+    
+
+
+    </content>
+    <footer>
+      <Bar >
+
+
+      </Bar>
+    </footer>
+  </Page>
+</mvc:View>

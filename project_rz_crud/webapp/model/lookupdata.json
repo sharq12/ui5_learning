@@ -1,0 +1,113 @@
+{
+    "aEmpTabCols":[
+        {
+            "text": "Employee Id",
+            "key": "Empid"
+        },
+        {
+            "text": "Name",
+            "key": "Name"
+        },
+        {
+            "text": "Designation",
+            "key": "Desig"
+        },
+        {
+            "text": "Skill",
+            "key": "Skill"
+        },
+        {
+            "text": "Salary",
+            "key": "Salary"
+        },
+        {
+            "text": "Date Of Joining",
+            "key": "Doj"
+        }
+
+    ],
+    "aOprs":[
+        {
+            "text": "EQUAL",
+            "key": "EQ"
+        },
+        {
+            "text": "GREATER THAN",
+            "key": "GT"
+        },
+        {
+            "text": "LESS THAN",
+            "key": "LT"
+        },
+        {
+            "text": "BETWEEN",
+            "key": "BT"
+        }
+
+    ],
+    "aGenders": [
+        {
+            "text": "Male",
+            "key": "M"
+        },
+        {
+            "text": "FeMale",
+            "key": "F"
+        }
+    ],
+    "aYesNo":[
+        {
+            "text": "Yes",
+            "key": "Y"
+        },
+        {
+            "text": "No",
+            "key": "N"
+        }
+    ],
+    "aDaysOfWeek":[
+        {
+            "text": "Monday",
+            "key": "Monday"
+        },
+        {
+            "text": "Tuesday",
+            "key": "Tuesday"
+        },
+        {
+            "text": "wednessday",
+            "key": "wednessday"
+        },
+        {
+            "text": "Thursday",
+            "key": "Thursday"
+        },
+        {
+            "text": "Friday",
+            "key": "Friday"
+        },
+        {
+            "text": "Saturday",
+            "key": "Saturday"
+        },  {
+            "text": "Sunday",
+            "key": "Sunday"
+        }
+    ],
+    "aStatuses":[
+        {
+            "text":"Open",
+            "key":"0"
+        },
+        {
+            "text":"InProgress",
+            "key":"1"
+        },
+        {
+            "text":"Completed",
+            "key":"2"
+        }
+
+    ]
+
+}

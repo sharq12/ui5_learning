@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.demo.b74ui5app.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="I am View4" showNavButton="true" navButtonPress="onPressBack">
+        <content>
+            <Panel headerText="Edit the employee details" class="sapUiSmallMargin" width="auto">
+                <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="2" emptySpanXL="6" emptySpanL="6" emptySpanM="6">
+                    <f:content>
+                        <Label text="Employee Id"></Label>
+                        <Input id="idEmpId" value="{Empid}" enabled="false"></Input>
+                        <Label text="Employee Name"></Label>
+                        <Input id="idName" value="{Name}"></Input>
+                        <Label text="Designation"></Label>
+                        <Input id="idDesig" value="{Desig}"></Input>
+                        <Label text="Skill" ></Label>
+                        <Input id="idSkill" value="{Skill}"></Input>
+                        <Label text="Email"></Label>
+                        <Input id="idEmail" value="{Email}"></Input>
+                        <Label text="Salary"></Label>
+                        <Input id="idSalary" value="{Salary}"></Input>
+                        <Label text="Date of joining"></Label>
+                        <DatePicker id="idDoj" valueFormat="yyyy-MM-ddT00:00:00" displayFormat="dd-MM-yyyy" dateValue="{Doj}"></DatePicker>
+                    </f:content>
+                </f:SimpleForm>
+            </Panel>
+        </content>
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="Save" icon="sap-icon://save" type="Emphasized" press="onPressSave"></Button>
+                    <Button text="Cancel" icon="sap-icon://cancel" type="Reject"></Button>
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

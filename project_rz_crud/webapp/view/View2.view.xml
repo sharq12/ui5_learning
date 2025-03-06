@@ -1,0 +1,43 @@
+<mvc:View controllerName="com.demo.b74ui5app.controller.View2"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+  <Page title="I am View2" showNavButton="true" navButtonPress="onPressBack">
+    <content>
+
+      <ObjectHeader title="{Name}" number="{Salary}" numberUnit="INR">
+        <attributes>
+          <ObjectAttribute title="Employee Id" text="{Empid}"></ObjectAttribute>
+          <ObjectAttribute title="Designation" text="{Desig}"></ObjectAttribute>
+        </attributes>
+      </ObjectHeader>
+      <IconTabBar >
+        <items>
+          <IconTabFilter icon="sap-icon://hint">
+            <f:SimpleForm editable="false" id="idSF">
+              <f:content>
+                <Label text="Employee ID"></Label>
+                <Text text="{Empid}"></Text>
+                <Label text="Employee Name"></Label>
+                <Text text="{Name}"></Text>
+                <Label text="Designation"></Label>
+                <Text text="{Desig}"></Text>
+                 <Label text="Skill"></Label>
+                <Text text="{Skill}"></Text>
+                 <Label text="Email ID"></Label>
+                <Text text="{Email}"></Text>
+                 <Label text="Salary"></Label>
+                <Text text="{Salary}"></Text>
+              </f:content>
+            </f:SimpleForm>
+          </IconTabFilter>
+        </items>
+
+      </IconTabBar>
+
+
+
+
+    </content>
+  </Page>
+</mvc:View>
